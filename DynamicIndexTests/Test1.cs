@@ -88,5 +88,13 @@ namespace DynamicIndexTests
             Assert.IsTrue(success);
             Assert.AreEqual(val, "Visual");
         }
+
+        [TestMethod]
+        public void TestMethod7()
+        {
+            var success = _object.Index()["Object1"]["Object1"]["Property762"].Get(out var val);
+
+            Assert.IsFalse(success);
+        }
     }
 }
